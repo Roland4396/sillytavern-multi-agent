@@ -13,13 +13,6 @@ import {
   initComposerModel,
 } from "./agents";
 import {
-  isShujukuAvailable,
-  getTableData,
-  getCurrentPreset,
-  tableDataToText,
-  onTableUpdate,
-} from "./utils/shujuku";
-import {
   openConfigurator,
   closeConfigurator,
   isConfiguratorOpen,
@@ -117,33 +110,6 @@ const MultiAgentAPI = {
    * 状态注解（高级用法）
    */
   StateAnnotation: GraphStateAnnotation,
-
-  // ===== 神数据库集成 =====
-
-  /**
-   * 检查神数据库是否可用
-   */
-  isShujukuAvailable,
-
-  /**
-   * 获取神数据库表格数据
-   */
-  getTableData,
-
-  /**
-   * 获取当前剧情预设
-   */
-  getCurrentPreset,
-
-  /**
-   * 表格数据转文本
-   */
-  tableDataToText,
-
-  /**
-   * 监听表格更新
-   */
-  onTableUpdate,
 
   // ===== 可视化配置器 API =====
 

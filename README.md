@@ -9,7 +9,6 @@
 - **变量系统**: 支持 `{{variable}}` 模板变量，实时预览
 - **持久化存储**: 自动保存到 SillyTavern 设置
 - **导入导出**: JSON 格式配置文件，方便备份分享
-- **神数据库集成**: 可读取神数据库表格数据
 
 ## 安装方式
 
@@ -87,8 +86,6 @@ src/
 │   ├── director.ts           # 导演
 │   ├── persona.ts            # 角色代理
 │   └── composer.ts           # 整合者
-├── utils/
-│   └── shujuku.ts            # 神数据库集成
 ├── graph.ts                  # LangGraph 流程图
 ├── state.ts                  # 状态定义
 └── index.ts                  # 入口文件

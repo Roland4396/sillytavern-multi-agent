@@ -5,11 +5,9 @@
  * 1. 提取 XML 标签中的预设指令
  * 2. 分离角色设定和对话历史
  * 3. 识别用户当前输入
- * 4. 获取神数据库表格数据
  */
 
 import type { GraphState, ParsedInput } from "../state";
-import { getTableData } from "../utils/shujuku";
 
 // 预设指令标签
 const PRESET_TAGS = [
@@ -110,22 +108,17 @@ export async function parserNode(
     }
   }
 
-  // 获取神数据库表格数据
-  const tableData = getTableData();
-
   const parsedInput: ParsedInput = {
     presetInstructions,
     characterSettings,
     chatHistory,
     userInput,
-    tableData: tableData || undefined,
   };
 
   console.log("[MultiAgent] Parser 完成解析:", {
     presetCount: Object.keys(presetInstructions).length,
     characterCount: Object.keys(characterSettings).length,
     historyCount: chatHistory.length,
-    hasTableData: !!tableData,
   });
 
   return { parsedInput };

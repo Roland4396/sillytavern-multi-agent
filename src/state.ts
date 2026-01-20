@@ -32,8 +32,6 @@ export interface ParsedInput {
   characterSettings: Record<string, string>;  // 角色设定
   chatHistory: Array<{ role: string; content: string }>;  // 对话历史
   userInput: string;  // 用户当前输入
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  tableData?: any;  // 神数据库表格数据（TableData 类型）
 }
 
 /**
